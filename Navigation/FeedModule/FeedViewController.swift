@@ -77,7 +77,6 @@ class FeedViewController: UIViewController {
     
     // 3 Добавляем кнопку которая будет вызывать наш алерт контроллер
     func addTargets() {
-//        button.addTarget(self, action: #selector(addTarget), for: .touchUpInside)
         button.addTarget(self, action: #selector(showDetailController), for: .touchUpInside)
     }
     
@@ -110,7 +109,7 @@ class FeedViewController: UIViewController {
     @objc func showDetailController() {
         let viewController = PostViewController()
         navigationController?.pushViewController(viewController, animated: true)
-//        print(navigationController)
+
     }
     
 }
