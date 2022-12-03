@@ -12,6 +12,7 @@
 		7C049EB228FEDA0F0072CD2A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C049EB128FEDA0F0072CD2A /* PostViewController.swift */; };
 		7C049EB728FEDA110072CD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C049EB628FEDA110072CD2A /* Assets.xcassets */; };
 		7C049EBA28FEDA110072CD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C049EB828FEDA110072CD2A /* LaunchScreen.storyboard */; };
+		7C2CAE122911212A00E83B0E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2CAE112911212A00E83B0E /* ProfileHeaderView.swift */; };
 		7C3D8CF829015178006193A6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D8CF729015178006193A6 /* FeedViewController.swift */; };
 		7C3D8CFA29016491006193A6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D8CF929016491006193A6 /* TabBarController.swift */; };
 		7C3D8CFC29016549006193A6 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D8CFB29016549006193A6 /* FeedModel.swift */; };
@@ -27,6 +28,7 @@
 		7C049EB628FEDA110072CD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C049EB928FEDA110072CD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C049EBB28FEDA110072CD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C2CAE112911212A00E83B0E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		7C3D8CF729015178006193A6 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7C3D8CF929016491006193A6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		7C3D8CFB29016549006193A6 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 				7C3D8CF129014D9A006193A6 /* Application */,
 				7C3D8CF229014DDE006193A6 /* TabBarModule */,
 				7C3D8CF329015036006193A6 /* FeedModule */,
-				7C3D8CF429015052006193A6 /* ProfileModule */,
+				7C3D8CF429015052006193A6 /* Profile */,
 				7C049EB628FEDA110072CD2A /* Assets.xcassets */,
 				7C049EB828FEDA110072CD2A /* LaunchScreen.storyboard */,
 				7C049EBB28FEDA110072CD2A /* Info.plist */,
@@ -103,12 +105,13 @@
 			path = FeedModule;
 			sourceTree = "<group>";
 		};
-		7C3D8CF429015052006193A6 /* ProfileModule */ = {
+		7C3D8CF429015052006193A6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				7C3D8CFD29016583006193A6 /* ProfileViewController.swift */,
+				7C2CAE112911212A00E83B0E /* ProfileHeaderView.swift */,
 			);
-			path = ProfileModule;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +188,7 @@
 				7C4770052907F16B009B7DEF /* PostModel.swift in Sources */,
 				7C3D8CFC29016549006193A6 /* FeedModel.swift in Sources */,
 				7C049EB228FEDA0F0072CD2A /* PostViewController.swift in Sources */,
+				7C2CAE122911212A00E83B0E /* ProfileHeaderView.swift in Sources */,
 				7C049EAE28FEDA0F0072CD2A /* AppDelegate.swift in Sources */,
 				7C3D8CFA29016491006193A6 /* TabBarController.swift in Sources */,
 				7C3D8CFE29016583006193A6 /* ProfileViewController.swift in Sources */,
