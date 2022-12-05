@@ -27,7 +27,7 @@ final class ProfileViewController: UIViewController {
             profileHeaderView.topAnchor.constraint(equalTo: view.topAnchor),
             profileHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             profileHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            profileHeaderView.heightAnchor.constraint(equalToConstant: 300)
+            profileHeaderView.heightAnchor.constraint(equalToConstant: 220)
         ])
     }
 }
