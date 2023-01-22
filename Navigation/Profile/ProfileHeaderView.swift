@@ -82,7 +82,6 @@ class ProfileHeaderView: UIView {
         fullNameLabel.text = profile.fullName
         statusLabel.text = profile.status
     }
-    
    
     func setupConstraints() {
         NSLayoutConstraint.activate([

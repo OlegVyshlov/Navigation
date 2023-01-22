@@ -25,7 +25,7 @@ class TabBarController: UITabBarController {
     
     private func setupUI() {
         feedTabNavigationController = UINavigationController.init(rootViewController: FeedViewController())
-        profileTabNavigationControoller = UINavigationController.init(rootViewController: ProfileViewController())
+        profileTabNavigationControoller = UINavigationController.init(rootViewController: LogInViewController())
         
         self.viewControllers = [feedTabNavigationController, profileTabNavigationControoller]
         

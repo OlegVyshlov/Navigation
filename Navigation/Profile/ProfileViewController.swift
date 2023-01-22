@@ -44,6 +44,7 @@ final class ProfileViewController: UIViewController {
         view.addSubview(profileHeaderView)
         view.addSubview(newButton)
         profileHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             profileHeaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             profileHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

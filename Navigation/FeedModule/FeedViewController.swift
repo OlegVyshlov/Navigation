@@ -95,7 +95,6 @@ class FeedViewController: UIViewController {
     @objc func showDetailController() {
         let viewController = PostViewController()
         navigationController?.pushViewController(viewController, animated: true)
-
     }
     
 }
