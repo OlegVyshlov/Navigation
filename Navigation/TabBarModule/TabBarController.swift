@@ -25,17 +25,17 @@ class TabBarController: UITabBarController {
     
     private func setupUI() {
         feedTabNavigationController = UINavigationController.init(rootViewController: FeedViewController())
-        profileTabNavigationControoller = UINavigationController.init(rootViewController: ProfileViewController())
+        profileTabNavigationControoller = UINavigationController.init(rootViewController: LogInViewController())
         
         self.viewControllers = [feedTabNavigationController, profileTabNavigationControoller]
         
-        let item1 = UITabBarItem(title: "Лента", image: UIImage(systemName: "map"), tag: 0)
-        let item2 = UITabBarItem(title: "Профиль", image: UIImage(systemName: "smiley"), tag: 1)
+        let item1 = UITabBarItem(title: "Feed", image: UIImage(systemName: "house.fill"), tag: 0)
+        let item2 = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.fill"), tag: 1)
         
         feedTabNavigationController.tabBarItem = item1
         profileTabNavigationControoller.tabBarItem = item2
         
-        UITabBar.appearance().tintColor = UIColor(red: 255/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 255/255.0, alpha: 1.0)
         UITabBar.appearance().backgroundColor = .gray
     }
     
