@@ -76,25 +76,20 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        self.view.addSubview(self.logoImageView)
+        setupLayout()
+    }
+    
+    func setupLayout() {
         self.view.addSubview(self.scrollView)
-//        self.view.addSubview(self.button)
+        self.scrollView.addSubview(self.logoImageView)
         self.scrollView.addSubview(self.stackView)
-//        self.scrollView.addSubview(self.button)
+        self.scrollView.addSubview(self.button)
         self.stackView.addArrangedSubview(self.loginTextField)
         self.stackView.addArrangedSubview(self.passwordTextField)
-        self.stackView.addArrangedSubview(self.button)
         
         self.setupConstraints()
         self.setupGestures()
         self.addTargets()
-
-        let scrollViewConstraints = self.scrollViewConstraints()
-        let stackViewConstraints = self.stackViewConstraints()
-        NSLayoutConstraint.activate(
-            scrollViewConstraints +
-            stackViewConstraints
-        )
     }
     
     func setupConstraints() {
@@ -104,12 +99,20 @@ class LogInViewController: UIViewController {
             logoImageView.heightAnchor.constraint(equalToConstant: 100),
             logoImageView.widthAnchor.constraint(equalToConstant: 100),
             
-        
-//            button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-//            button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 456),
-//            button.heightAnchor.constraint(equalToConstant: 50),
-//            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-//            button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16)
+            button.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 16),
+            button.heightAnchor.constraint(equalToConstant: 50),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
+            
+            self.scrollView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            
+            self.stackView.centerYAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 170),
+            self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16),
+            self.stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16),
+            self.stackView.heightAnchor.constraint(equalToConstant: 100)
             ])
     }
     
@@ -133,29 +136,6 @@ class LogInViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
-    private func scrollViewConstraints() -> [NSLayoutConstraint] {
-        let topAnchor = self.scrollView.topAnchor.constraint(equalTo: self.view.topAnchor)
-        let leadingAnchor = self.scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
-        let trailingAnchor = self.scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        let bottomAnchor = self.scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        
-        return [
-            topAnchor, leadingAnchor, trailingAnchor, bottomAnchor
-        ]
-    }
-    
-    private func stackViewConstraints() -> [NSLayoutConstraint] {
-        let centerYConstraint = self.stackView.centerYAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 170)
-        let leadingConstraint = self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16)
-        let trailingConstraint = self.stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16)
-        let heightConstraint = self.stackView.heightAnchor.constraint(equalToConstant: 150)
-        
-        return [
-            centerYConstraint, leadingConstraint, trailingConstraint, heightConstraint
-        ]
-    }
-    
     
     func addTargets() {
         button.addTarget(self, action: #selector(showDetailController), for: .touchUpInside)
